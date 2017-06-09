@@ -25,10 +25,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.engine('ejs', engine);
 app.set('view engine', 'ejs');
 
-// carEngine  = 'V89';
-
-// webAppEngine = ejs
-
 app.post('/create-user', function(req, res, next) {
     var user = new User();
 
@@ -44,6 +40,10 @@ app.post('/create-user', function(req, res, next) {
 
 app.get('/', function(req, res) {
     res.render('home');
+});
+
+app.get('/about', function(req, res) {
+    res.render('about');
 });
 
 app.listen(3000, function(err) {
