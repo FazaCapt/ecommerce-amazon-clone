@@ -1,6 +1,5 @@
 var express = require('express');
-var morgan = require('morgan'); // untuk memberikan report route mana yang talah dilewati atau log
-
+var morgan = require('morgan'); 
 
 var app = express();
 
