@@ -95,3 +95,5 @@ Install :
 2. morgan@1.6.1 'https://www.npmjs.com/package/morgan'
 3. mongoose@4.3.4
 4. bcrypt-nodejs@0.0.2
+5. ejs@2.3.4  
+6. ejs-mate@2.3.0

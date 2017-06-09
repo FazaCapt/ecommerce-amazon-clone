@@ -2,6 +2,8 @@ var express = require('express');
 var morgan = require('morgan'); 
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+var ejs = require('ejs');
+var engine = require('ejs-mate');
 
 var User = require('./models/user');
 
@@ -20,9 +22,12 @@ app.use(morgan('dev'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.engine('ejs', engine);
+app.set('view engine', 'ejs');
 
+// carEngine  = 'V89';
 
-
+// webAppEngine = ejs
 
 app.post('/create-user', function(req, res, next) {
     var user = new User();
@@ -35,6 +40,10 @@ app.post('/create-user', function(req, res, next) {
         if(err) return next(err);
         res.json('Successfully created a new user');
     });
+});
+
+app.get('/', function(req, res) {
+    res.render('home');
 });
 
 app.listen(3000, function(err) {
