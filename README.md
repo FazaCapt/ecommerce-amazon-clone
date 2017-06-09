@@ -97,3 +97,6 @@ Install :
 4. bcrypt-nodejs@0.0.2
 5. ejs@2.3.4  
 6. ejs-mate@2.3.0
+7. express-session@1.12.1
+8. cookie-parser@1.4.0
+9. express-flash@0.0.2
