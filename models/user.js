@@ -3,7 +3,7 @@ var bcrypt = require('bcrypt-nodejs');
 var Schema = mongoose.Schema;
 
 /* the user schema attributes /characteristic / fields */
-var UserSchema = new moongoose.Schema({
+var UserSchema = new mongoose.Schema({
     email: { type: String, unique: true, lowercase: true},
     password: String,
 
