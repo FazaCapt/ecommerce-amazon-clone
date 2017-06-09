@@ -92,4 +92,6 @@ Amazon Clone Part 4: Bonus Section
 Install : 
 
 1. express@4.13.3
-2. morgan 'https://www.npmjs.com/package/morgan'
+2. morgan@1.6.1 'https://www.npmjs.com/package/morgan'
+3. mongoose@4.3.4
+4. bcrypt-nodejs@0.0.2
