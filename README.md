@@ -100,3 +100,6 @@ Install :
 7. express-session@1.12.1
 8. cookie-parser@1.4.0
 9. express-flash@0.0.2
+10. connect-mongo@1.1.0
+11. passport@0.3.2
+12. passport-local@1.0.0
