@@ -92,3 +92,4 @@ Amazon Clone Part 4: Bonus Section
 Install : 
 
 1. express@4.13.3
+2. morgan 'https://www.npmjs.com/package/morgan'

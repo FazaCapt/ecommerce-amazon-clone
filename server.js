@@ -1,26 +1,20 @@
 var express = require('express');
+var morgan = require('morgan'); // untuk memberikan report route mana yang talah dilewati atau log
+
 
 var app = express();
 
-// app.get('/');
-//  ini contoh: 
-// app.get('/name', function(req, res) {
-//     var name = 'Faza';
-//     res.json('My name is ' + name);
-// });
+// middleware
+app.use(morgan('dev')); 
 
 app.get('/', function(req, res) {
     var name = 'Faza';
     res.json('My name is ' + name);
 });
 
-// app.post();
-
-// app.put()
-
-// app.delete('/delete')
-
-
+app.get('/catwoman', function (req, res) {
+    res.json('batman')
+});
 
 app.listen(3000, function(err) {
     if(err) throw err;
