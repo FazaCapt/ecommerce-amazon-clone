@@ -18,6 +18,7 @@ mongoose.connect('mongodb://root:abc123@ds117592.mlab.com:17592/ecommerce', func
 });
 
 // middleware
+app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev')); 
 
 app.use(bodyParser.json());
