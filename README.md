@@ -33,8 +33,6 @@ Build Amazon Clone Part 1: User Authentication
 20. Fixing some codes Part 1
 21. Fixing some codes Part 2
 22. Adding an Edit feature: Profile
-23. Review for this course
-24. Source code for Section 1
 –
 
 Build Amazon Clone Part 2: Adding Products and Category
@@ -55,7 +53,6 @@ Build Amazon Clone Part 2: Adding Products and Category
 14. Instant Search Part 1
 15. Instant Search Part 2
 16. Instant Search Part 3
-17. Source code for Section 2
 –
 
 Amazon Clone Part 3: Cart and Payment feature
@@ -76,7 +73,6 @@ Amazon Clone Part 3: Cart and Payment feature
 14. Adding a spinner
 15. Modify profile route
 16. Adding History Page
-17. Source code for section 3
 –
 
 Amazon Clone Part 4: Bonus Section

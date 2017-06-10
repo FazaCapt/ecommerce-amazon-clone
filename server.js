@@ -7,7 +7,7 @@ var engine = require('ejs-mate');
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
 var flash = require('express-flash');
-var MongoStore = require('connect-mongo')(session);
+var MongoStore = require('connect-mongo/es5')(session);
 var passport = require('passport');
 
 var secret = require('./config/secret');
@@ -31,12 +31,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
     resave: true,
-    saveUnintialized: true,
+    saveUninitialized: true,
     secret: secret.secretKey,
     store: new MongoStore({ url: secret.database, autoReconnect: true})
 }));
 app.use(flash());
-
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(function(req, res, next) {
+    res.locals.user = req.user;
+    next();
+});
 app.engine('ejs', engine);
 app.set('view engine', 'ejs');
 

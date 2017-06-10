@@ -1,14 +1,11 @@
 var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy();
-
-
+var LocalStrategy = require('passport-local').Strategy;
+var User = require('../models/user');
 
 // serialize and deserialize
 passport.serializeUser(function(user, done) {
     done(null, user._id);
 });
-
-// req.user
 
 passport.deserializeUser(function(id, done) {
     User.findById(id, function(err, user) {
@@ -17,12 +14,12 @@ passport.deserializeUser(function(id, done) {
 });
 
 // Middleware
-passport.use('local-login', new localStorage({
+passport.use('local-login', new LocalStrategy({
     usernameField: 'email',
-    passwortField: 'password',
+    passwordField: 'password',
     passReqToCallback: true
 }, function(req, email, password, done){
-    User.findOne({email: email}, function(err, user) {
+    User.findOne({ email: email }, function(err, user) {
         if(err) return done(err);
 
         if(!user) {
@@ -30,7 +27,7 @@ passport.use('local-login', new localStorage({
         }
 
         if(!user.comparePassword(password)) {
-            return done(null, false, req.flash('loginMessage', 'Ooops! wrong passpwrd pal'))
+            return done(null, false, req.flash('loginMessage', 'Ooops! wrong password'))
         }
         return done(null, user);
     });
@@ -43,3 +40,5 @@ exports.isAuthenticated =  function(req, res, next) {
     }
     res.redirect('/login');
 }
+
+ 
