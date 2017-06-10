@@ -99,6 +99,8 @@ Install :
 10. connect-mongo@1.1.0
 11. passport@0.3.2
 12. passport-local@1.0.0
+13. async@1.5.0
+14. faker@3.0.1
 
 
 document:
@@ -106,3 +108,4 @@ document:
 1. https://code.jquery.com/
 2. https://code.jquery.com/jquery-2.2.4.min.js
 3. https://www.bootstrapcdn.com/
+4. faker: 'https://github.com/marak/Faker.js/'

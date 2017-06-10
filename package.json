@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "async": "^1.5.0",
     "bcrypt-nodejs": "0.0.2",
     "body-parser": "^1.17.2",
     "connect-mongo": "^1.1.0",
@@ -19,10 +20,10 @@
     "express": "^4.15.3",
     "express-flash": "0.0.2",
     "express-session": "^1.12.1",
+    "faker": "^3.0.1",
     "mongoose": "^4.3.4",
     "morgan": "^1.8.2",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0"
   }
 }
-
