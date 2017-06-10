@@ -99,3 +99,10 @@ Install :
 10. connect-mongo@1.1.0
 11. passport@0.3.2
 12. passport-local@1.0.0
+
+
+document:
+
+1. https://code.jquery.com/
+2. https://code.jquery.com/jquery-2.2.4.min.js
+3. https://www.bootstrapcdn.com/
