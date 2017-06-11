@@ -101,6 +101,10 @@ Install :
 12. passport-local@1.0.0
 13. async@1.5.0
 14. faker@3.0.1
+15. installing elasticsearch:
+    - homebrew : 'https://brew.sh/' and '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+    - brew install elasticsearch
+    - elasticsearch
 
 
 document:
