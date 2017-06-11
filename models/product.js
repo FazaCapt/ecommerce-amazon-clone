@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 var ProductSchema = new Schema({
     category: { type: Schema.Types.ObjectId, ref: 'Category' },
     name: String,
-    // price: Number,
+    price: Number,
     image: String
 });
 
